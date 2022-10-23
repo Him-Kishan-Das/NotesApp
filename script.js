@@ -8,7 +8,7 @@ function save(){
     let html = '';
 for (let [a, b] of Object.entries(localStorage)) {
     
-    html += `<p class="display">${a} <br> ${b} </p>`;
+    html += `<p class="display_key">${a} </p> <p class="display_value"> ${b} </p>`;
    
   }
   document.getElementById('note-display').innerHTML = html;
