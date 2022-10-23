@@ -6,12 +6,13 @@ function save(){
     localStorage.setItem(key, a);
     
     let html = '';
-for (let [a, b] of Object.entries(localStorage)) {
+    for (let [a, b] of Object.entries(localStorage)) {
+        
+        html += `<p class="display_key">${a} </p> <p class="display_value"> ${b} </p>`;
+       
+      }
+      document.getElementById('note-display').innerHTML = html;
     
-    html += `<p class="display_key">${a} </p> <p class="display_value"> ${b} </p>`;
-   
-  }
-  document.getElementById('note-display').innerHTML = html;
 
     document.getElementById('note-title').value = '';
     document.getElementById("note-field").value = '';
